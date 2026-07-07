@@ -1,0 +1,403 @@
+/* Importando fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+/* Variáveis de Cores e Estilo */
+:root {
+    --bg-primary: #0a0c10;
+    --bg-secondary: #121620;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --accent-blue: #3b82f6;
+    --accent-glow: #60a5fa;
+    --accent-red: #ef4444; /* Cor que lembra o botão 'REC' ou luz de estúdio */
+    --font-main: 'Outfit', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container Principal */
+.header-container, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Cabeçalho Premium */
+header {
+    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 60%);
+    border-bottom: 1px solid var(--border-color);
+    padding: 4rem 0 3rem 0;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-red);
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, #fff 30%, var(--accent-glow) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    font-size: 0.95rem;
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+/* Seções */
+section {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-blue);
+    border-radius: 2px;
+}
+
+#sobre p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Linha do Tempo (Timeline) */
+.timeline-container {
+    border-left: 2px solid var(--border-color);
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.1rem;
+    top: 0.35rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    border: 3px solid var(--accent-blue);
+    transition: var(--transition);
+}
+
+.timeline-item:hover::before {
+    background-color: var(--accent-glow);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.year {
+    display: block;
+    font-weight: 700;
+    color: var(--accent-glow);
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-item p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Habilidades (Grid) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96, 165, 250, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.skill-card ul {
+    list-style: none;
+}
+
+.skill-card li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.skill-card li::before {
+    content: '⚡';
+    margin-right: 8px;
+    font-size: 0.8rem;
+}
+
+/* Rodapé */
+footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+footer p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition);
+    background-color: var(--bg-card);
+}
+
+.social-links a:hover {
+    border-color: var(--accent-blue);
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-glow);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+.copyright {
+    font-size: 0.8rem !important;
+    opacity: 0.5;
+}
+
+/* Responsividade (Telas menores) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .rec-control {
+        align-items: flex-start;
+        width: 100%;
+    }
+    #rec-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Controle do REC */
+.rec-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+#rec-btn {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--accent-red);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#rec-btn::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+}
+
+#rec-btn.recording {
+    background-color: var(--accent-red);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+#rec-btn.recording::before {
+    background-color: #fff;
+    animation: blink 1s infinite;
+}
+
+/* Timer */
+#rec-timer {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: var(--accent-red);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.hidden-timer {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-5px);
+}
+
+/* Viewfinder (Grade da Câmera) */
+#viewfinder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Deixa cliques passarem para a página */
+    z-index: 9999;
+    transition: var(--transition);
+}
+
+.hidden-viewfinder {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.grid-line {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.horizontal-1 { top: 33.33%; left: 0; width: 100%; height: 1px; }
+.horizontal-2 { top: 66.66%; left: 0; width: 100%; height: 1px; }
+.vertical-1 { left: 33.33%; top: 0; width: 1px; height: 100%; }
+.vertical-2 { left: 66.66%; top: 0; width: 1px; height: 100%; }
+
+.rec-indicator-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--accent-red);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+    animation: blink 1s infinite;
+}
+
+/* Viewfinder cantos (Camera Corners) */
+#viewfinder::before, #viewfinder::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#viewfinder::before {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+}
+
+#viewfinder::after {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+}
