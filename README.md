@@ -1,6 +1,7 @@
-# Portfólio de Transição de Carreira - Iago Paz de Oliveira
+# Portfólio de Transição de Carreira - Iago Paz
+Obs: Esse Readm foi criado com IA, mas revisado por mim o criador.
 
-Este projeto é um portfólio pessoal desenvolvido com HTML, CSS e JavaScript para apresentar a jornada profissional de Iago Paz de Oliveira, com foco em transição de carreira para a área de tecnologia, analise e desenvolvimento de sistemas, infraestrutura, suporte técnico e Inteligência Artificial.
+Este projeto é um portfólio pessoal desenvolvido com HTML, CSS e JavaScript para apresentar a jornada profissional, com foco em transição de carreira para a área de tecnologia, analise e desenvolvimento de sistemas, infraestrutura, suporte técnico e Inteligência Artificial.
 
 O site foi construído com uma identidade visual moderna, com elementos de design responsivo, grade de câmera visual, seção de destaque do perfil, linha do tempo, cards de habilidades e links para redes sociais profissionais.
 
@@ -15,22 +16,21 @@ O portfólio tem como objetivo:
 
 ## Perfil profissional
 
-Iago Paz de Oliveira é natural de Manaus e iniciou sua carreira na área de telecomunicações em 2013. Sua trajetória passou por emissoras de televisão e chegou à RedeTV!, onde atuou com operação técnica em transmissões ao vivo.
+Iago é natural de Manaus-AM e iniciou sua carreira na área de telecomunicações em 2013. Sua trajetória passou por emissoras de televisão e chegou à RedeTV!, onde atuou com operação técnica em transmissões ao vivo.
 
 Com base nessa experiência, o projeto comunica a transformação da carreira do autor: da área audiovisual para a área de tecnologia, com foco em:
 
 - Desenvolvimento web;
-- AWS e Amazon Bedrock;
 - Linux e infraestrutura;
 - Automação com Python;
-- IA Generativa.
+- IA Generativas.
 
 ## Estrutura do projeto
 
 O projeto é composto pelos seguintes arquivos:
 
 ```text
-Portif-lio-com-agent-DIO/
+Portifolio-com-agent-DIO/
 ├── index.html
 ├── style.css
 ├── script.js
