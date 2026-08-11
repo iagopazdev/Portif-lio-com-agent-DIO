@@ -1,5 +1,5 @@
 # Portfólio de Transição de Carreira - Iago Paz
-Obs: Esse Readm foi criado com IA, mas revisado por mim o criador.
+Obs: Esse Readme foi criado com IA, mas revisado por mim o criador.
 
 Este projeto é um portfólio pessoal desenvolvido com HTML, CSS e JavaScript para apresentar a jornada profissional, com foco em transição de carreira para a área de tecnologia, analise e desenvolvimento de sistemas, infraestrutura, suporte técnico e Inteligência Artificial.
 
